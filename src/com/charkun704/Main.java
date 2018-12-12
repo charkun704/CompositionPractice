@@ -10,8 +10,6 @@ public class Main {
         Motherboard theMobo = new Motherboard("B850","ASUS",4,2,"v18");
 
         PC deskun = new PC(theCase,theMonitor,theMobo);
-        deskun.getMonitor().drawPixelAt(800,600,"red");
-        deskun.getMotherboard().loadProgram("Windows 10");
-        deskun.getTheCase().pressPowerButton();
+        deskun.powerUp();
     }
 }

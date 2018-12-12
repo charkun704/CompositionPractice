@@ -11,9 +11,27 @@ public class PC {
         this.motherboard = motherboard;
     }
 
-    public Case getTheCase() { return theCase; }
+    public void powerUp(){
+        getTheCase().pressPowerButton();
+        drawLogo();
+    }
 
-    public Monitor getMonitor() { return monitor; }
+    private void drawLogo(){
+        //Fancy graphics
+        System.out.println("     _      _ _ \n" +
+                "    | |    | | |\n" +
+                "  __| | ___| | |\n" +
+                " / _` |/ _ \\ | |\n" +
+                "| (_| |  __/ | |\n" +
+                " \\__,_|\\___|_|_|\n" +
+                "                \n" +
+                "                ");
+        monitor.drawPixelAt(1640,430,"green");
+    }
 
-    public Motherboard getMotherboard() { return motherboard; }
+    private Case getTheCase() { return theCase; }
+
+    private Monitor getMonitor() { return monitor; }
+
+    private Motherboard getMotherboard() { return motherboard; }
 }
